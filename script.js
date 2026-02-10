@@ -108,16 +108,21 @@ document.querySelectorAll('.code-content, .step-code').forEach(codeBlock => {
 document.querySelectorAll('.faq-item h3').forEach(question => {
     question.style.cursor = 'pointer';
     question.style.position = 'relative';
-    question.style.paddingRight = '30px';
+    question.style.paddingRight = '40px';
+
+    // Create wrapper for original content to preserve i18n
+    const contentSpan = document.createElement('span');
+    contentSpan.className = 'faq-question-text';
+    while (question.firstChild) {
+        contentSpan.appendChild(question.firstChild);
+    }
+    question.appendChild(contentSpan);
 
     // Add indicator
     const indicator = document.createElement('span');
+    indicator.className = 'faq-indicator';
     indicator.textContent = '+';
-    indicator.style.position = 'absolute';
-    indicator.style.right = '0';
-    indicator.style.top = '50%';
-    indicator.style.transform = 'translateY(-50%)';
-    indicator.style.transition = 'transform 0.3s ease';
+    indicator.style.cssText = 'position: absolute; right: 0; top: 50%; transform: translateY(-50%); transition: transform 0.3s ease; pointer-events: none;';
     question.appendChild(indicator);
 
     question.addEventListener('click', () => {
@@ -128,9 +133,9 @@ document.querySelectorAll('.faq-item h3').forEach(question => {
         document.querySelectorAll('.faq-item p').forEach(p => {
             p.style.display = 'none';
         });
-        document.querySelectorAll('.faq-item h3 span').forEach(span => {
-            span.textContent = '+';
-            span.style.transform = 'translateY(-50%)';
+        document.querySelectorAll('.faq-indicator').forEach(ind => {
+            ind.textContent = '+';
+            ind.style.transform = 'translateY(-50%)';
         });
 
         // Toggle current

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jzero - AI-Friendly Go Microservices Framework</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="14" stroke="#00D9FF" stroke-width="3" fill="none"/>
+                        <path d="M10 16L14 20L22 12" stroke="#00D9FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                    <span>jzero</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#ecosystem">Ecosystem</a>
+                    <a href="https://docs.jzero.io" target="_blank">Documentation</a>
+                    <a href="https://github.com/jzero-io/jzero" target="_blank" class="nav-link-github">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    Build Go microservices<br>
+                    <span class="gradient-text">at lightspeed</span>
+                </h1>
+                <p class="hero-subtitle">
+                    jzero is the AI-friendly, developer-centric framework built on go-zero.
+                    Generate production-ready API, Gateway, and RPC services from simple definitions.
+                    Stop writing boilerplate, start shipping features.
+                </p>
+                <div class="hero-cta">
+                    <a href="https://github.com/jzero-io/jzero" class="btn btn-primary">
+                        Get Started
+                    </a>
+                    <a href="https://docs.jzero.io" class="btn btn-secondary">
+                        Read the Docs
+                    </a>
+                </div>
+                <div class="hero-code">
+                    <div class="code-header">
+                        <span class="code-dot"></span>
+                        <span class="code-dot"></span>
+                        <span class="code-dot"></span>
+                        <span class="code-title">Terminal</span>
+                    </div>
+                    <pre class="code-content"><code><span class="prompt">$</span> go install github.com/jzero-io/jzero/cmd/jzero@latest
+<span class="prompt">$</span> jzero new myproject
+<span class="prompt">$</span> cd myproject && go mod tidy
+<span class="prompt">$</span> go run main.go server
+<span class="comment"># ✓ API server running on :8001</span>
+<span class="comment"># ✓ Swagger UI available at /swagger</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By -->
+    <section class="trusted">
+        <div class="container">
+            <p class="trusted-label">Trusted by developers building modern microservices</p>
+            <div class="trusted-logos">
+                <div class="logo-placeholder">Production Ready</div>
+                <div class="logo-placeholder">Enterprise Scale</div>
+                <div class="logo-placeholder">Cloud Native</div>
+                <div class="logo-placeholder">AI Enhanced</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Built for modern development</h2>
+                <p>Everything you need to build scalable microservices in Go, without the complexity.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h3>Lightning Fast Code Generation</h3>
+                    <p>Generate production-ready server and client code from API, Proto, and SQL definitions. What takes hours manually takes seconds with jzero.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3>AI-Friendly Architecture</h3>
+                    <p>Built-in jzero-skills enables AI to generate best-practice business logic. Lower cognitive load, ship faster, focus on what matters.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="9" y1="9" x2="15" y2="9"/>
+                            <line x1="9" y1="15" x2="15" y2="15"/>
+                        </svg>
+                    </div>
+                    <h3>Flexible Configuration</h3>
+                    <p>Control jzero with config files, CLI args, or environment variables. Mix and match to fit your workflow. Simple by default, powerful when needed.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 12h8"/>
+                            <path d="M12 8v8"/>
+                        </svg>
+                    </div>
+                    <h3>Git-Change Based Generation</h3>
+                    <p>Generate code only for changed files in your git repo. Incremental updates for large projects, saving time and reducing errors.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3>Custom Templates</h3>
+                    <p>Built-in templates follow best practices. Create custom templates for your enterprise needs. Consistent code across your team, every time.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <h3>Full-Stack Microservices</h3>
+                    <p>Generate API services, Gateways with service discovery, and RPC services. One framework for all your microservice needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section class="capabilities">
+        <div class="container">
+            <div class="section-header">
+                <h2>Packed with powerful features</h2>
+                <p>No matter the use case, jzero has you covered.</p>
+            </div>
+            <div class="capabilities-list">
+                <div class="capability">API Code Generation</div>
+                <div class="capability">Gateway Services</div>
+                <div class="capability">RPC Services</div>
+                <div class="capability">Service Discovery</div>
+                <div class="capability">Load Balancing</div>
+                <div class="capability">Circuit Breaker</div>
+                <div class="capability">Rate Limiting</div>
+                <div class="capability">Database Support (MySQL/PostgreSQL/MongoDB)</div>
+                <div class="capability">Redis Cache</div>
+                <div class="capability">Config Center Integration</div>
+                <div class="capability">Swagger UI</div>
+                <div class="capability">Prometheus Metrics</div>
+                <div class="capability">JWT Authentication</div>
+                <div class="capability">Handler/Logic/Context Architecture</div>
+                <div class="capability">Docker Support</div>
+                <div class="capability">GitHub Actions</div>
+                <div class="capability">Custom Templates</div>
+                <div class="capability">Git-Diff Generation</div>
+                <div class="capability">JetBrains IntelliJ Plugin</div>
+                <div class="capability">Admin Dashboard</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ecosystem Section -->
+    <section id="ecosystem" class="ecosystem">
+        <div class="container">
+            <div class="section-header">
+                <h2>A complete ecosystem</h2>
+                <p>Everything you need to build, deploy, and manage your microservices.</p>
+            </div>
+
+            <div class="ecosystem-grid">
+                <a href="https://github.com/jzero-io/jzero" class="ecosystem-card" target="_blank">
+                    <div class="ecosystem-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="14" stroke="#00D9FF" stroke-width="3" fill="none"/>
+                            <path d="M10 16L14 20L22 12" stroke="#00D9FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3>jzero</h3>
+                    <p>Core framework for generating API, Gateway, and RPC services from definitions.</p>
+                    <span class="ecosystem-link">View on GitHub →</span>
+                </a>
+
+                <a href="https://github.com/jzero-io/jzero-admin" class="ecosystem-card" target="_blank">
+                    <div class="ecosystem-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="3" y1="9" x2="21" y2="9"/>
+                            <line x1="9" y1="21" x2="9" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3>jzero-admin</h3>
+                    <p>Next-generation admin system built with jzero backend and soybean frontend.</p>
+                    <span class="ecosystem-link">Live Demo →</span>
+                </a>
+
+                <a href="https://github.com/jzero-io/jzero-intellij" class="ecosystem-card" target="_blank">
+                    <div class="ecosystem-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>jzero-intellij</h3>
+                    <p>JetBrains/GoLand plugin for seamless jzero integration in your IDE.</p>
+                    <span class="ecosystem-link">View Plugin →</span>
+                </a>
+
+                <a href="https://github.com/jzero-io/examples" class="ecosystem-card" target="_blank">
+                    <div class="ecosystem-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                    </div>
+                    <h3>Examples</h3>
+                    <p>Collection of example projects demonstrating jzero best practices.</p>
+                    <span class="ecosystem-link">Browse Examples →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start Section -->
+    <section class="quickstart">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get started in minutes</h2>
+                <p>From zero to running microservices in under 5 minutes.</p>
+            </div>
+
+            <div class="quickstart-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Install jzero</h3>
+                    <pre class="step-code"><code>go install github.com/jzero-io/jzero/cmd/jzero@latest</code></pre>
+                    <p>Install via Go or use Docker</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Create your project</h3>
+                    <pre class="step-code"><code>jzero new myproject
+cd myproject
+go mod tidy</code></pre>
+                    <p>Generate a complete microservice project</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Run your service</h3>
+                    <pre class="step-code"><code>go run main.go server</code></pre>
+                    <p>Start your API server with Swagger UI</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Define your API</h3>
+                    <pre class="step-code"><code>jzero api</code></pre>
+                    <p>Generate code from your API definitions</p>
+                </div>
+            </div>
+
+            <div class="quickstart-cta">
+                <a href="https://docs.jzero.io" class="btn btn-primary">Read Full Documentation</a>
+                <a href="https://github.com/jzero-io/examples" class="btn btn-secondary">View Examples</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently asked questions</h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>How is jzero different from go-zero?</h3>
+                    <p>jzero builds on go-zero with enhanced tooling, AI-friendly architecture, and git-change-based code generation. It's fully compatible with go-zero while providing a better developer experience.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can I use jzero with existing go-zero projects?</h3>
+                    <p>Yes! jzero maintains full compatibility with go-zero. You can gradually adopt jzero features without rewriting existing code.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What databases does jzero support?</h3>
+                    <p>jzero doesn't lock you into specific infrastructure. It supports MySQL, PostgreSQL, MongoDB, Redis, and works with various config centers through flexible configuration.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How does AI integration work?</h3>
+                    <p>jzero-skills provides context and patterns that help AI assistants understand your codebase and generate best-practice business logic code consistently.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Is jzero production-ready?</h3>
+                    <p>Absolutely. jzero is used in production environments, powering enterprise-scale microservices with robust resilience patterns including circuit breakers, rate limiting, and service discovery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to build better microservices?</h2>
+            <p>Join developers shipping faster with jzero.</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/jzero-io/jzero" class="btn btn-primary btn-large">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Star on GitHub
+                </a>
+                <a href="https://docs.jzero.io" class="btn btn-secondary btn-large">Read Documentation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="14" stroke="#00D9FF" stroke-width="3" fill="none"/>
+                            <path d="M10 16L14 20L22 12" stroke="#00D9FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </svg>
+                        <span>jzero</span>
+                    </div>
+                    <p>AI-friendly Go microservices framework built on go-zero.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="https://github.com/jzero-io/jzero">jzero Framework</a>
+                        <a href="https://github.com/jzero-io/jzero-admin">jzero-admin</a>
+                        <a href="https://github.com/jzero-io/jzero-intellij">JetBrains Plugin</a>
+                        <a href="https://github.com/jzero-io/examples">Examples</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <a href="https://docs.jzero.io">Documentation</a>
+                        <a href="https://github.com/jzero-io/jzero/releases">Releases</a>
+                        <a href="https://github.com/jzero-io/jzero/issues">Issues</a>
+                        <a href="https://deepwiki.com/jzero-io/jzero">DeepWiki</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <a href="https://github.com/jzero-io">GitHub Organization</a>
+                        <a href="https://github.com/jzero-io/jzero/stargazers">Star History</a>
+                        <a href="https://github.com/jzero-io/jzero/blob/main/CONTRIBUTING.md">Contributing</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 jzero-io. Released under MIT License.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/jzero-io" target="_blank" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

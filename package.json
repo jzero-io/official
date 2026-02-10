@@ -1,0 +1,12 @@
+{
+  "name": "jzero-website",
+  "version": "1.0.0",
+  "description": "Jzero Official Website",
+  "scripts": {
+    "dev": "python3 -m http.server 8080",
+    "build": "echo 'Ready to deploy'"
+  },
+  "keywords": ["jzero", "go-zero", "microservices", "golang"],
+  "author": "jzero-io",
+  "license": "MIT"
+}

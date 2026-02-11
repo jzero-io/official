@@ -150,35 +150,40 @@ body {
 
 /* Language Switcher */
 .lang-switcher {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: var(--spacing-xs);
-    background: var(--color-bg-tertiary);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-full);
-    padding: var(--spacing-xs);
+    background: rgba(26, 26, 36, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 3px;
+    overflow: hidden;
 }
 
 .lang-btn {
-    padding: var(--spacing-xs) var(--spacing-sm);
-    font-size: var(--font-size-xs);
+    position: relative;
+    z-index: 1;
+    padding: 6px 14px;
+    font-size: 13px;
     font-weight: 500;
     background: transparent;
     color: var(--color-text-secondary);
     border: none;
-    border-radius: var(--border-radius-full);
+    border-radius: 6px;
     cursor: pointer;
-    transition: all var(--transition-fast);
+    transition: all var(--transition-base);
+    letter-spacing: 0.02em;
 }
 
 .lang-btn:hover {
     color: var(--color-text);
-    background: var(--color-bg-secondary);
 }
 
 .lang-btn.active {
-    background: var(--color-primary);
-    color: var(--color-bg);
+    background: linear-gradient(135deg, rgba(0, 217, 255, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%);
+    color: var(--color-primary);
+    box-shadow: 0 2px 8px rgba(0, 217, 255, 0.1);
 }
 
 /* ===== Hero Section ===== */
@@ -712,11 +717,20 @@ body {
     }
 
     .nav-links {
-        gap: var(--spacing-md);
+        gap: var(--spacing-sm);
     }
 
     .nav-links a:not(.nav-link-github) {
         display: none;
+    }
+
+    .lang-switcher {
+        padding: 2px;
+    }
+
+    .lang-btn {
+        padding: 5px 10px;
+        font-size: 12px;
     }
 
     .hero {

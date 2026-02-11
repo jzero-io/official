@@ -716,12 +716,34 @@ body {
         --spacing-3xl: 3rem;
     }
 
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+
     .nav-links {
-        gap: var(--spacing-sm);
+        gap: var(--spacing-xs);
     }
 
     .nav-links a:not(.nav-link-github) {
         display: none;
+    }
+
+    .logo {
+        font-size: var(--font-size-lg);
+    }
+
+    .logo svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .nav-link-github {
+        padding: var(--spacing-xs);
+    }
+
+    .nav-link-github svg {
+        width: 18px;
+        height: 18px;
     }
 
     .lang-switcher {
@@ -729,8 +751,8 @@ body {
     }
 
     .lang-btn {
-        padding: 5px 10px;
-        font-size: 12px;
+        padding: 4px 8px;
+        font-size: 11px;
     }
 
     .hero {
@@ -762,7 +784,26 @@ body {
 
 @media (max-width: 480px) {
     .container {
-        padding: 0 var(--spacing-md);
+        padding: 0 var(--spacing-sm);
+    }
+
+    .logo {
+        font-size: var(--font-size-base);
+    }
+
+    .logo svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .lang-btn {
+        padding: 3px 6px;
+        font-size: 10px;
+    }
+
+    .nav-link-github svg {
+        width: 16px;
+        height: 16px;
     }
 
     .btn {

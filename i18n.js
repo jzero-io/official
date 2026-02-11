@@ -7,7 +7,8 @@ const translations = {
         'nav.documentation': 'Documentation',
 
         // Hero
-        'hero.title': 'Template & AI Driven',
+        'hero.title': 'AI Driven Go Framework',
+        'hero.title.jzero': 'jzero',
         'hero.title.gradient': 'Efficient & Reliable',
         'hero.subtitle': 'Auto-generate server and client code from api/proto/sql definitions. Let AI generate best-practice business logic with built-in jzero-skills, reduce cognitive load, free your hands!',
         'hero.cta.github': 'Star on GitHub',
@@ -51,7 +52,7 @@ const translations = {
         'cap.19': 'JetBrains Plugin', 'cap.20': 'Admin Dashboard',
 
         // Ecosystem
-        'ecosystem.title': 'A complete ecosystem',
+        'ecosystem.title': 'Related Ecosystem',
         'ecosystem.subtitle': 'Everything you need to build, deploy, and manage your microservices.',
         'eco.1.title': 'jzero', 'eco.1.desc': 'Core framework for generating API, Gateway, and RPC services.', 'eco.1.link': 'View on GitHub →',
         'eco.2.title': 'jzero-admin', 'eco.2.desc': 'Next-generation admin system with jzero backend.', 'eco.2.link': 'Live Demo →',
@@ -100,7 +101,8 @@ const translations = {
         'nav.documentation': '文档',
 
         // Hero
-        'hero.title': '模板与AI驱动',
+        'hero.title': 'AI驱动的Go框架',
+        'hero.title.jzero': 'jzero',
         'hero.title.gradient': '高效可靠',
         'hero.subtitle': '基于可描述文件(api/proto/sql)自动生成服务端和客户端框架代码, 基于内置的 jzero-skills 让 AI 生成符合最佳实践的业务逻辑代码，降低开发心智, 解放双手!',
         'hero.cta.github': 'GitHub Star',
@@ -144,7 +146,7 @@ const translations = {
         'cap.19': 'JetBrains 插件', 'cap.20': '管理后台',
 
         // Ecosystem
-        'ecosystem.title': '完整生态系统',
+        'ecosystem.title': '相关生态',
         'ecosystem.subtitle': '构建、部署和管理微服务所需的一切。',
         'eco.1.title': 'jzero', 'eco.1.desc': '核心框架，从定义生成 API、网关和 RPC 服务。', 'eco.1.link': '查看 GitHub →',
         'eco.2.title': 'jzero-admin', 'eco.2.desc': '基于 jzero 后端的下一代管理系统。', 'eco.2.link': '在线演示 →',

@@ -70,6 +70,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -80,6 +81,9 @@ body {
     background-color: var(--color-bg);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
 }
 
 /* ===== Container ===== */
@@ -87,6 +91,10 @@ body {
     max-width: var(--container-max-width);
     margin: 0 auto;
     padding: 0 var(--spacing-lg);
+
+
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* ===== Navigation ===== */
@@ -95,6 +103,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     z-index: 1000;
     background: rgba(10, 10, 15, 0.8);
     backdrop-filter: blur(12px);
@@ -375,10 +384,13 @@ body {
     font-size: var(--font-size-sm);
     line-height: 1.8;
     overflow-x: auto;
+    max-width: 100%;
 }
 
 .code-content code {
     color: var(--color-text);
+    white-space: pre;
+    word-wrap: normal;
 }
 
 .prompt {
@@ -781,6 +793,10 @@ body {
         --spacing-3xl: 3rem;
     }
 
+    .nav-content {
+        padding: 0 var(--spacing-xs);
+    }
+
     .container {
         padding: 0 var(--spacing-md);
     }
@@ -858,6 +874,10 @@ body {
 }
 
 @media (max-width: 480px) {
+    *, *::before, *::after {
+        max-width: 100%;
+    }
+
     .container {
         padding: 0 var(--spacing-sm);
     }

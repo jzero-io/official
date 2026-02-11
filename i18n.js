@@ -54,10 +54,9 @@ const translations = {
         // Ecosystem
         'ecosystem.title': 'Related Ecosystem',
         'ecosystem.subtitle': 'Everything you need to build, deploy, and manage your microservices.',
-        'eco.1.title': 'jzero', 'eco.1.desc': 'Core framework for generating API, Gateway, and RPC services.', 'eco.1.link': 'View on GitHub →',
-        'eco.2.title': 'jzero-admin', 'eco.2.desc': 'Next-generation admin system with jzero backend.', 'eco.2.link': 'Live Demo →',
-        'eco.3.title': 'jzero-intellij', 'eco.3.desc': 'JetBrains/GoLand plugin for seamless IDE integration.', 'eco.3.link': 'View Plugin →',
-        'eco.4.title': 'Examples', 'eco.4.desc': 'Example projects demonstrating jzero best practices.', 'eco.4.link': 'Browse Examples →',
+        'eco.1.title': 'jzero-admin', 'eco.1.desc': 'Next-generation admin system with jzero backend.', 'eco.1.link': 'Live Demo →',
+        'eco.2.title': 'jzero-intellij', 'eco.2.desc': 'JetBrains/GoLand plugin for seamless IDE integration.', 'eco.2.link': 'View Plugin →',
+        'eco.3.title': 'Examples', 'eco.3.desc': 'Example projects demonstrating jzero best practices.', 'eco.3.link': 'Browse Examples →',
 
         // Quick Start
         'quickstart.title': 'Get started in minutes',
@@ -148,10 +147,9 @@ const translations = {
         // Ecosystem
         'ecosystem.title': '相关生态',
         'ecosystem.subtitle': '构建、部署和管理微服务所需的一切。',
-        'eco.1.title': 'jzero', 'eco.1.desc': '核心框架，从定义生成 API、网关和 RPC 服务。', 'eco.1.link': '查看 GitHub →',
-        'eco.2.title': 'jzero-admin', 'eco.2.desc': '基于 jzero 后端的下一代管理系统。', 'eco.2.link': '在线演示 →',
-        'eco.3.title': 'jzero-intellij', 'eco.3.desc': 'JetBrains/GoLand 插件，IDE 无缝集成。', 'eco.3.link': '查看插件 →',
-        'eco.4.title': '示例项目', 'eco.4.desc': '展示 jzero 最佳实践的示例集合。', 'eco.4.link': '浏览示例 →',
+        'eco.1.title': 'jzero-admin', 'eco.1.desc': '基于 jzero 后端的下一代管理系统。', 'eco.1.link': '在线演示 →',
+        'eco.2.title': 'jzero-intellij', 'eco.2.desc': 'JetBrains/GoLand 插件，IDE 无缝集成。', 'eco.2.link': '查看插件 →',
+        'eco.3.title': '示例项目', 'eco.3.desc': '展示 jzero 最佳实践的示例集合。', 'eco.3.link': '浏览示例 →',
 
         // Quick Start
         'quickstart.subtitle': '从零到运行微服务，不到 5 分钟。',

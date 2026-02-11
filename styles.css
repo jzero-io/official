@@ -70,7 +70,6 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body {
@@ -81,9 +80,9 @@ body {
     background-color: var(--color-bg);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
     width: 100%;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* ===== Container ===== */
@@ -389,8 +388,8 @@ body {
 
 .code-content code {
     color: var(--color-text);
-    white-space: pre;
-    word-wrap: normal;
+    white-space: pre-wrap;
+    word-break: break-all;
 }
 
 .prompt {
@@ -627,12 +626,15 @@ body {
     border-radius: var(--border-radius-md);
     margin-bottom: var(--spacing-sm);
     overflow-x: auto;
+    max-width: 100%;
 }
 
 .step-code code {
     font-family: var(--font-mono);
     font-size: var(--font-size-xs);
     color: var(--color-text-secondary);
+    white-space: pre-wrap;
+    word-break: break-all;
 }
 
 .step p {
@@ -846,6 +848,19 @@ body {
         font-size: 12px;
     }
 
+    .code-content {
+        padding: var(--spacing-md);
+        font-size: var(--font-size-xs);
+    }
+
+    .hero-code {
+        max-width: 100%;
+    }
+
+    .step-code {
+        padding: var(--spacing-sm);
+    }
+
     .hero {
         padding: calc(64px + var(--spacing-2xl)) 0 var(--spacing-2xl);
     }
@@ -874,10 +889,6 @@ body {
 }
 
 @media (max-width: 480px) {
-    *, *::before, *::after {
-        max-width: 100%;
-    }
-
     .container {
         padding: 0 var(--spacing-sm);
     }

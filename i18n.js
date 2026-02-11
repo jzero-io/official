@@ -1,3 +1,6 @@
+
+
+
 // 国际化翻译配置
 const translations = {
     en: {
@@ -9,7 +12,7 @@ const translations = {
         // Hero
         'hero.title.line1': 'jzero + AI',
         'hero.title.line2': 'Efficient & Reliable Go Framework',
-        'hero.subtitle': 'Auto-generate server & client code from api/proto/sql definitions<br>Let AI generate best-practice business logic with jzero-skills<br>Reduce cognitive load, focus on what matters',
+        'hero.subtitle': 'Auto-generate server and client code from api/proto/sql definitions. Let AI generate best-practice business logic with jzero-skills, reduce cognitive load, focus on what matters.',
         'hero.cta.github': 'Star on GitHub',
         'hero.cta.docs': 'Read the Docs',
         'hero.code.desc': 'One-Click Install jzero',
@@ -38,7 +41,7 @@ const translations = {
         'features.5.title': 'Custom Templates',
         'features.5.desc': 'Built-in templates follow best practices. Create custom templates for your enterprise needs. Consistent code across your team, every time.',
         'features.6.title': 'Plugin Architecture',
-        'features.6.desc': 'Extensible plugin system for custom generators, templates, and integrations. Tailor jzero to your specific requirements.',
+        'features.6.desc': 'Support multi-module collaborative development, ultimately compiled into monolithic service deployment. Easy plugin installation and removal for flexible architecture.',
 
         // Capabilities
         'capabilities.title': 'Packed with powerful features',
@@ -102,7 +105,7 @@ const translations = {
         // Hero
         'hero.title.line1': 'jzero + AI',
         'hero.title.line2': '高效可靠的 Go 框架',
-        'hero.subtitle': '基于 api/proto/sql 自动生成服务端与客户端代码<br>内置 jzero-skills，让 AI 生成符合最佳实践的业务逻辑<br>降低开发心智负担，专注核心业务',
+        'hero.subtitle': '基于 api/proto/sql 自动生成服务端与客户端代码，内置 jzero-skills，让 AI 生成符合最佳实践的业务逻辑，降低开发心智负担，专注核心业务。',
         'hero.cta.github': 'GitHub Star',
         'hero.cta.docs': '阅读文档',
         'hero.code.desc': '一键安装 jzero',
@@ -131,7 +134,7 @@ const translations = {
         'features.5.title': '自定义模板',
         'features.5.desc': '内置最佳实践模板。创建企业定制模板，团队代码始终保持一致。',
         'features.6.title': '支持插件架构',
-        'features.6.desc': '可扩展的插件系统，支持自定义生成器、模板和集成。按需定制 jzero。',
+        'features.6.desc': '支持多模块协同开发，最终编译成单体服务部署。可方便地进行插件的安装和卸载操作，灵活适配架构需求。',
 
         // Capabilities
         'capabilities.title': '强大功能集合',

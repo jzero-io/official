@@ -7,9 +7,9 @@ const translations = {
         'nav.documentation': 'Documentation',
 
         // Hero
-        'hero.title': 'Build Go microservices',
-        'hero.title.gradient': 'at lightspeed',
-        'hero.subtitle': 'jzero is the AI-friendly, developer-centric framework built on go-zero. Generate production-ready API, Gateway, and RPC services from simple definitions. Stop writing boilerplate, start shipping features.',
+        'hero.title': 'Template & AI Driven',
+        'hero.title.gradient': 'Efficient & Reliable',
+        'hero.subtitle': 'Auto-generate server and client code from api/proto/sql definitions. Let AI generate best-practice business logic with built-in jzero-skills, reduce cognitive load, free your hands!',
         'hero.cta.github': 'Star on GitHub',
         'hero.cta.docs': 'Read the Docs',
         'hero.code.title': 'Terminal',

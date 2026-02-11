@@ -7,12 +7,12 @@ const translations = {
         'nav.documentation': 'Documentation',
 
         // Hero
-        'hero.title': 'AI Driven Go Framework',
-        'hero.title.jzero': 'jzero',
-        'hero.title.gradient': 'Efficient & Reliable',
-        'hero.subtitle': 'Auto-generate server and client code from api/proto/sql definitions. Let AI generate best-practice business logic with built-in jzero-skills, reduce cognitive load, free your hands!',
+        'hero.title.line1': 'jzero + AI',
+        'hero.title.line2': 'Efficient & Reliable Go Framework',
+        'hero.subtitle': 'Auto-generate server and client code from api/proto/sql definitions<br>Let AI generate best-practice business logic with built-in jzero-skills<br>Reduce cognitive load, free your hands!',
         'hero.cta.github': 'Star on GitHub',
         'hero.cta.docs': 'Read the Docs',
+        'hero.code.desc': 'One-Click Install jzero',
         'hero.code.title': 'Terminal',
         'hero.code.comment1': '# ✓ API server running on :8001',
         'hero.code.comment2': '# ✓ Swagger UI available at /swagger',
@@ -100,12 +100,12 @@ const translations = {
         'nav.documentation': '文档',
 
         // Hero
-        'hero.title': 'AI驱动的Go框架',
-        'hero.title.jzero': 'jzero',
-        'hero.title.gradient': '高效可靠',
-        'hero.subtitle': '基于可描述文件(api/proto/sql)自动生成服务端和客户端框架代码, 基于内置的 jzero-skills 让 AI 生成符合最佳实践的业务逻辑代码，降低开发心智, 解放双手!',
+        'hero.title.line1': 'jzero + AI',
+        'hero.title.line2': '高效可靠的 Go 开发框架',
+        'hero.subtitle': '基于可描述文件(api/proto/sql)自动生成服务端和客户端框架代码<br>基于内置的 jzero-skills 让 AI 生成符合最佳实践的业务逻辑代码<br>降低开发心智 解放双手!',
         'hero.cta.github': 'GitHub Star',
         'hero.cta.docs': '阅读文档',
+        'hero.code.desc': '一键安装 jzero',
         'hero.code.title': '终端',
         'hero.code.comment1': '# ✓ API 服务运行在 :8001',
         'hero.code.comment2': '# ✓ Swagger UI 访问 /swagger',
@@ -205,6 +205,9 @@ function setLanguage(lang) {
             const btnText = el.querySelector('.btn-text');
             if (btnText) {
                 btnText.textContent = translations[lang][key];
+            } else if (el.hasAttribute('data-i18n-html')) {
+                // 支持 HTML 内容
+                el.innerHTML = translations[lang][key];
             } else {
                 el.textContent = translations[lang][key];
             }

@@ -261,14 +261,14 @@ body {
 
 /* ===== Hero Section ===== */
 .hero {
-    padding: calc(64px + var(--spacing-4xl)) 0 var(--spacing-4xl);
+    padding: calc(64px + var(--spacing-4xl)) 0 var(--spacing-xl);
     text-align: center;
 }
 
 .hero-content h1 {
     font-size: clamp(var(--font-size-4xl), 8vw, var(--font-size-6xl));
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 1.4;
     margin-bottom: var(--spacing-xl);
     letter-spacing: -0.02em;
 }
@@ -277,12 +277,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: var(--spacing-xl) 0;
+    margin: var(--spacing-lg) 0;
 }
 
 .hero-logo img {
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
 }
 
 .gradient-text {
@@ -296,8 +296,18 @@ body {
     font-size: clamp(var(--font-size-lg), 2vw, var(--font-size-xl));
     color: var(--color-text-secondary);
     max-width: 700px;
-    margin: 0 auto var(--spacing-2xl);
-    line-height: 1.7;
+    margin: 0 auto var(--spacing-xl);
+    line-height: 1.6;
+}
+
+.hero-code-desc {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin: 0 auto var(--spacing-md);
+    background: linear-gradient(135deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .hero-cta {
@@ -390,6 +400,34 @@ body {
     letter-spacing: 0.05em;
 }
 
+.code-copy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    margin-left: var(--spacing-sm);
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.code-copy-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text);
+}
+
+.code-copy-btn.copied {
+    color: #10b981;
+}
+
+.code-copy-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
 .code-content {
     padding: var(--spacing-lg);
     font-family: var(--font-mono);
@@ -452,7 +490,33 @@ body {
 /* ===== Section Headers ===== */
 .section-header {
     text-align: center;
-    margin-bottom: var(--spacing-4xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.section-header-horizontal {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.section-header-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
+    border-radius: var(--border-radius-md);
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.section-header-horizontal h2 {
+    font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl));
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.02em;
 }
 
 .section-header h2 {
@@ -469,7 +533,7 @@ body {
 
 /* ===== Features Section ===== */
 .features {
-    padding: var(--spacing-2xl) 0 var(--spacing-4xl);
+    padding: var(--spacing-lg) 0 var(--spacing-lg);
 }
 
 .features-grid {
@@ -492,6 +556,13 @@ body {
     box-shadow: var(--shadow-glow);
 }
 
+.feature-card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
 .feature-icon {
     width: 48px;
     height: 48px;
@@ -500,14 +571,14 @@ body {
     justify-content: center;
     background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
     border-radius: var(--border-radius-md);
-    margin-bottom: var(--spacing-md);
     color: var(--color-primary);
+    flex-shrink: 0;
 }
 
 .feature-card h3 {
     font-size: var(--font-size-xl);
     font-weight: 600;
-    margin-bottom: var(--spacing-sm);
+    margin: 0;
 }
 
 .feature-card p {
@@ -546,7 +617,7 @@ body {
 
 /* ===== Ecosystem Section ===== */
 .ecosystem {
-    padding: var(--spacing-4xl) 0;
+    padding: var(--spacing-xl) 0;
 }
 
 .ecosystem-grid {
@@ -571,6 +642,13 @@ body {
     box-shadow: var(--shadow-glow);
 }
 
+.ecosystem-card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
 .ecosystem-icon {
     width: 56px;
     height: 56px;
@@ -579,14 +657,14 @@ body {
     justify-content: center;
     background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
     border-radius: var(--border-radius-md);
-    margin-bottom: var(--spacing-md);
     color: var(--color-primary);
+    flex-shrink: 0;
 }
 
 .ecosystem-card h3 {
     font-size: var(--font-size-xl);
     font-weight: 600;
-    margin-bottom: var(--spacing-sm);
+    margin: 0;
     color: var(--color-text);
 }
 
@@ -731,7 +809,7 @@ body {
 
 /* ===== Footer ===== */
 .footer {
-    padding: var(--spacing-3xl) 0 var(--spacing-xl);
+    padding: var(--spacing-xl) 0 var(--spacing-xl);
     border-top: 1px solid var(--color-border);
 }
 
@@ -784,7 +862,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: var(--spacing-xl);
 }
 
 .footer-bottom p {
@@ -808,6 +885,32 @@ body {
 
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
+    .section-header-horizontal {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-header-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .section-header-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .feature-card-header,
+    .ecosystem-card-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-icon,
+    .ecosystem-icon {
+        margin-bottom: var(--spacing-md);
+    }
+
     :root {
         --spacing-4xl: 4rem;
         --spacing-3xl: 3rem;

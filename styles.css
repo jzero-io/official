@@ -273,6 +273,18 @@ body {
     letter-spacing: -0.02em;
 }
 
+.hero-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: var(--spacing-xl) 0;
+}
+
+.hero-logo img {
+    width: 120px;
+    height: 120px;
+}
+
 .gradient-text {
     background: linear-gradient(135deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
     -webkit-background-clip: text;

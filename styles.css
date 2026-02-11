@@ -323,14 +323,15 @@ body {
 }
 
 .btn-secondary {
-    background: transparent;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(129, 140, 248, 0.2) 100%);
     color: var(--color-text);
-    border-color: var(--color-border-light);
+    border-color: var(--color-accent);
 }
 
 .btn-secondary:hover {
-    background: var(--color-bg-tertiary);
-    border-color: var(--color-primary);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.3) 0%, rgba(129, 140, 248, 0.3) 100%);
+    border-color: var(--color-accent-light);
+    transform: translateY(-2px);
 }
 
 .btn-large {
@@ -384,12 +385,18 @@ body {
     line-height: 1.8;
     overflow-x: auto;
     max-width: 100%;
+    margin: 0;
+}
+
+.code-content code {
+    display: block;
+    color: var(--color-text);
+    white-space: pre;
 }
 
 .code-content code {
     color: var(--color-text);
-    white-space: pre-wrap;
-    word-break: break-all;
+    white-space: pre;
 }
 
 .prompt {
@@ -450,7 +457,7 @@ body {
 
 /* ===== Features Section ===== */
 .features {
-    padding: var(--spacing-4xl) 0;
+    padding: var(--spacing-2xl) 0 var(--spacing-4xl);
 }
 
 .features-grid {

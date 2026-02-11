@@ -10,8 +10,8 @@ const translations = {
         'hero.title': 'Build Go microservices',
         'hero.title.gradient': 'at lightspeed',
         'hero.subtitle': 'jzero is the AI-friendly, developer-centric framework built on go-zero. Generate production-ready API, Gateway, and RPC services from simple definitions. Stop writing boilerplate, start shipping features.',
-        'hero.cta.primary': 'Get Started',
-        'hero.cta.secondary': 'Read the Docs',
+        'hero.cta.github': 'Star on GitHub',
+        'hero.cta.docs': 'Read the Docs',
         'hero.code.title': 'Terminal',
         'hero.code.comment1': '# ✓ API server running on :8001',
         'hero.code.comment2': '# ✓ Swagger UI available at /swagger',
@@ -91,7 +91,7 @@ const translations = {
         'footer.framework': 'jzero Framework', 'footer.admin': 'jzero-admin', 'footer.plugin': 'JetBrains Plugin', 'footer.examples': 'Examples',
         'footer.docs_link': 'Documentation', 'footer.releases': 'Releases', 'footer.issues': 'Issues', 'footer.deepwiki': 'DeepWiki',
         'footer.github_org': 'GitHub', 'footer.star_history': 'Star History', 'footer.contributing': 'Contributing',
-        'footer.copyright': '© 2025 jzero-io. MIT License.'
+        'footer.copyright': '© 2024-2026 jzero-io. MIT License.'
     },
     zh: {
         // Navigation
@@ -103,8 +103,8 @@ const translations = {
         'hero.title': '构建 Go 微服务',
         'hero.title.gradient': '极速开发',
         'hero.subtitle': 'jzero 是基于 go-zero 构建的 AI 友好框架。从简单定义生成生产级 API、网关和 RPC 服务。专注核心业务，告别样板代码。',
-        'hero.cta.primary': '快速开始',
-        'hero.cta.secondary': '阅读文档',
+        'hero.cta.github': 'GitHub Star',
+        'hero.cta.docs': '阅读文档',
         'hero.code.title': '终端',
         'hero.code.comment1': '# ✓ API 服务运行在 :8001',
         'hero.code.comment2': '# ✓ Swagger UI 访问 /swagger',
@@ -152,7 +152,6 @@ const translations = {
         'eco.4.title': '示例项目', 'eco.4.desc': '展示 jzero 最佳实践的示例集合。', 'eco.4.link': '浏览示例 →',
 
         // Quick Start
-        'quickstart.title': '几分钟即可上手',
         'quickstart.subtitle': '从零到运行微服务，不到 5 分钟。',
         'qs.1.title': '安装 jzero', 'qs.1.code': 'go install github.com/jzero-io/jzero/cmd/jzero@latest', 'qs.1.desc': 'Go 安装或 Docker',
         'qs.2.title': '创建项目', 'qs.2.code': 'jzero new myproject\\ncd myproject\\ngo mod tidy', 'qs.2.desc': '生成完整微服务',
@@ -184,7 +183,7 @@ const translations = {
         'footer.framework': 'jzero 框架', 'footer.admin': 'jzero-admin', 'footer.plugin': 'JetBrains 插件', 'footer.examples': '示例',
         'footer.docs_link': '文档', 'footer.releases': '版本', 'footer.issues': '问题', 'footer.deepwiki': 'DeepWiki',
         'footer.github_org': 'GitHub', 'footer.star_history': 'Star 历史', 'footer.contributing': '贡献',
-        'footer.copyright': '© 2025 jzero-io. MIT 许可证。'
+        'footer.copyright': '© 2024-2026 jzero-io. MIT 许可证。'
     }
 };
 
@@ -202,7 +201,13 @@ function setLanguage(lang) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang]?.[key]) {
-            el.textContent = translations[lang][key];
+            // 如果有 .btn-text 子元素，只替换文本部分
+            const btnText = el.querySelector('.btn-text');
+            if (btnText) {
+                btnText.textContent = translations[lang][key];
+            } else {
+                el.textContent = translations[lang][key];
+            }
         }
     });
 

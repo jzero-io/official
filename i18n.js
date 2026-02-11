@@ -188,6 +188,12 @@ const translations = {
     }
 };
 
+// 语言显示名称
+const languageNames = {
+    en: 'EN',
+    zh: '中文'
+};
+
 // 设置语言
 function setLanguage(lang) {
     localStorage.setItem('jzero-lang', lang);
@@ -200,8 +206,15 @@ function setLanguage(lang) {
         }
     });
 
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
+    // 更新当前语言显示
+    const currentLangEl = document.querySelector('.current-lang');
+    if (currentLangEl) {
+        currentLangEl.textContent = languageNames[lang];
+    }
+
+    // 更新语言选项的选中状态
+    document.querySelectorAll('.lang-option').forEach(option => {
+        option.classList.toggle('selected', option.dataset.lang === lang);
     });
 
     window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
@@ -214,10 +227,52 @@ function initLanguage() {
     setLanguage(saved || browser);
 }
 
+// 初始化下拉框
+function initDropdown() {
+    const dropdownBtn = document.getElementById('langDropdownBtn');
+    const dropdownMenu = document.getElementById('langDropdownMenu');
+
+    if (!dropdownBtn || !dropdownMenu) return;
+
+    // 切换下拉菜单
+    dropdownBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownBtn.classList.toggle('active');
+        dropdownMenu.classList.toggle('show');
+    });
+
+    // 选择语言
+    dropdownMenu.querySelectorAll('.lang-option').forEach(option => {
+        option.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const lang = option.dataset.lang;
+            setLanguage(lang);
+            closeDropdown();
+        });
+    });
+
+    // 点击外部关闭
+    document.addEventListener('click', () => {
+        closeDropdown();
+    });
+
+    // ESC 键关闭
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeDropdown();
+        }
+    });
+}
+
+function closeDropdown() {
+    const dropdownBtn = document.getElementById('langDropdownBtn');
+    const dropdownMenu = document.getElementById('langDropdownMenu');
+    if (dropdownBtn) dropdownBtn.classList.remove('active');
+    if (dropdownMenu) dropdownMenu.classList.remove('show');
+}
+
 // 绑定事件
 document.addEventListener('DOMContentLoaded', () => {
     initLanguage();
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
-    });
+    initDropdown();
 });

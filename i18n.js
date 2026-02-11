@@ -100,7 +100,7 @@ const translations = {
         'nav.documentation': '文档',
 
         // Hero
-        'hero.title': '模板以及AI驱动的Go开发框架',
+        'hero.title': '模板与AI驱动',
         'hero.title.gradient': '高效可靠',
         'hero.subtitle': 'jzero 是基于 go-zero 构建的 AI 友好框架。从简单定义生成生产级 API、网关和 RPC 服务。专注核心业务，告别样板代码。',
         'hero.cta.github': 'GitHub Star',

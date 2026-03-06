@@ -13,7 +13,7 @@ const translations = {
         'hero.title.line1': 'jzero + AI',
         'hero.title.line2': 'Efficient & Reliable Go Framework',
         'hero.subtitle': 'Auto-generate server and client code from api/proto/sql definitions. Let AI generate best-practice business logic with jzero-skills, reduce cognitive load, focus on what matters.',
-        'hero.cta.github': 'Star on GitHub',
+        'hero.cta.github': 'View on GitHub',
         'hero.cta.docs': 'Read the Docs',
         'hero.code.desc': 'One-Click Install jzero',
         'hero.code.title': 'Terminal',
@@ -106,7 +106,7 @@ const translations = {
         'hero.title.line1': 'jzero + AI',
         'hero.title.line2': '高效可靠的 Go 框架',
         'hero.subtitle': '基于 api/proto/sql 自动生成服务端与客户端代码，内置 jzero-skills，让 AI 生成符合最佳实践的业务逻辑，降低开发心智负担，专注核心业务。',
-        'hero.cta.github': 'GitHub Star',
+        'hero.cta.github': '查看 GitHub',
         'hero.cta.docs': '阅读文档',
         'hero.code.desc': '一键安装 jzero',
         'hero.code.title': '终端',
@@ -228,6 +228,13 @@ function setLanguage(lang) {
         option.classList.toggle('selected', option.dataset.lang === lang);
     });
 
+    // 根据 language 更新 jzero-admin 链接
+    const adminLink = document.getElementById('jzero-admin-link');
+    if (adminLink) {
+        // 中文使用国内链接，其他使用国外链接
+        adminLink.href = lang === 'zh' ? 'https://jzero-admin.jaronnie.com' : 'https://admin.jzero.io';
+    }
+
     window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
 }
 
@@ -235,7 +242,15 @@ function setLanguage(lang) {
 function initLanguage() {
     const saved = localStorage.getItem('jzero-lang');
     const browser = navigator.language.startsWith('zh') ? 'zh' : 'en';
-    setLanguage(saved || browser);
+    const lang = saved || browser;
+
+    // 先设置链接，避免跳转问题
+    const adminLink = document.getElementById('jzero-admin-link');
+    if (adminLink) {
+        adminLink.href = lang === 'zh' ? 'https://jzero-admin.jaronnie.com' : 'https://admin.jzero.io';
+    }
+
+    setLanguage(lang);
 }
 
 // 初始化下拉框

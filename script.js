@@ -202,3 +202,6 @@ if ('IntersectionObserver' in window) {
 console.log('%c🚀 jzero', 'font-size: 24px; font-weight: bold; color: #00d9ff;');
 console.log('%cAI-Friendly Go Microservices Framework', 'font-size: 14px; color: #a1a1aa;');
 console.log('%chttps://github.com/jzero-io/jzero', 'font-size: 12px; color: #6366f1;');
+
+// ===== Typewriter effect for install command =====
+// Disabled - using static code display instead

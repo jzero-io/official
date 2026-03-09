@@ -368,35 +368,41 @@ body {
     text-decoration: none;
     transition: all var(--transition-base);
     cursor: pointer;
-    border: 2px solid transparent;
-    background-clip: padding-box;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: inherit;
+    z-index: -1;
 }
 
 .btn-primary {
     background: linear-gradient(135deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
     color: var(--color-bg);
     box-shadow: var(--shadow-glow);
-    background-clip: padding-box;
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 60px rgba(0, 217, 255, 0.25);
-    background-clip: padding-box;
 }
 
 .btn-secondary {
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(129, 140, 248, 0.2) 100%);
     color: var(--color-text);
-    border-color: var(--color-accent);
-    background-clip: padding-box;
+    border: 2px solid var(--color-accent);
 }
 
 .btn-secondary:hover {
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.3) 0%, rgba(129, 140, 248, 0.3) 100%);
     border-color: var(--color-accent-light);
     transform: translateY(-2px);
-    background-clip: padding-box;
 }
 
 .btn-large {

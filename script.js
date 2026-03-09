@@ -85,7 +85,12 @@ document.querySelectorAll('.code-content, .step-code').forEach(codeBlock => {
     codeBlock.title = 'Click to copy';
 
     codeBlock.addEventListener('click', async () => {
-        const code = codeBlock.textContent;
+        // Get text content and remove $ prompt symbols
+        const code = codeBlock.textContent
+            .split('\n')
+            .map(line => line.replace(/^\$\s*/, '')) // Remove $ and space from start of each line
+            .join('\n')
+            .trim();
 
         try {
             await navigator.clipboard.writeText(code);
@@ -108,9 +113,16 @@ document.querySelectorAll('.code-content, .step-code').forEach(codeBlock => {
 document.querySelectorAll('.code-copy-btn').forEach(copyBtn => {
     copyBtn.addEventListener('click', async () => {
         const codeBlock = copyBtn.closest('.hero-code, .step-code')?.querySelector('.code-content, .step-code code, code');
-        const code = codeBlock?.textContent || codeBlock?.innerText || '';
+        let code = codeBlock?.textContent || codeBlock?.innerText || '';
 
         if (!code) return;
+
+        // Remove $ prompt symbols
+        code = code
+            .split('\n')
+            .map(line => line.replace(/^\$\s*/, ''))
+            .join('\n')
+            .trim();
 
         try {
             await navigator.clipboard.writeText(code);

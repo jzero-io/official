@@ -163,8 +163,46 @@ body {
 .nav-link-github {
     display: flex;
     align-items: center;
+    gap: var(--spacing-sm);
     padding: var(--spacing-sm);
     color: var(--color-text) !important;
+}
+
+.github-star-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    background: rgba(0, 217, 255, 0.1);
+    border: 1px solid rgba(0, 217, 255, 0.3);
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-primary);
+    transition: all var(--transition-fast);
+}
+
+.nav-link-github:hover .github-star-count {
+    background: rgba(0, 217, 255, 0.15);
+    border-color: rgba(0, 217, 255, 0.5);
+}
+
+.star-icon {
+    flex-shrink: 0;
+    animation: starPulse 2s ease-in-out infinite;
+}
+
+@keyframes starPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.star-number {
+    font-variant-numeric: tabular-nums;
 }
 
 /* Language Switcher */
@@ -1086,9 +1124,19 @@ body {
         padding: var(--spacing-xs);
     }
 
-    .nav-link-github svg {
+    .nav-link-github svg:first-child {
         width: 18px;
         height: 18px;
+    }
+
+    .github-star-count {
+        font-size: 11px;
+        padding: 2px 6px;
+    }
+
+    .star-icon {
+        width: 12px;
+        height: 12px;
     }
 
     .lang-dropdown-btn {
@@ -1179,9 +1227,20 @@ body {
         font-size: 11px;
     }
 
-    .nav-link-github svg {
+    .nav-link-github svg:first-child {
         width: 16px;
         height: 16px;
+    }
+
+    .github-star-count {
+        font-size: 10px;
+        padding: 1px 5px;
+        gap: 3px;
+    }
+
+    .star-icon {
+        width: 10px;
+        height: 10px;
     }
 
     .btn {

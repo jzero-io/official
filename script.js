@@ -215,5 +215,47 @@ console.log('%c🚀 jzero', 'font-size: 24px; font-weight: bold; color: #00d9ff;
 console.log('%cAI-Friendly Go Microservices Framework', 'font-size: 14px; color: #a1a1aa;');
 console.log('%chttps://github.com/jzero-io/jzero', 'font-size: 12px; color: #6366f1;');
 
+// ===== GitHub Star Count =====
+async function fetchGitHubStars() {
+    const starCountEl = document.getElementById('githubStarCount');
+    if (!starCountEl) return;
+
+    const starNumberEl = starCountEl.querySelector('.star-number');
+    if (!starNumberEl) return;
+
+    try {
+        // Try to fetch from GitHub API
+        const response = await fetch('https://api.github.com/repos/jzero-io/jzero', {
+            headers: {
+                'Accept': 'application/vnd.github.v3+json',
+            }
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            const stars = data.stargazers_count;
+
+            // Format the number (e.g., 1234 -> 1.2k)
+            if (stars >= 1000) {
+                starNumberEl.textContent = (stars / 1000).toFixed(1) + 'k';
+            } else {
+                starNumberEl.textContent = stars.toString();
+            }
+        } else {
+            throw new Error('API request failed');
+        }
+    } catch (error) {
+        console.log('Could not fetch GitHub stars:', error);
+        starNumberEl.textContent = '★';
+    }
+}
+
+// Fetch stars when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fetchGitHubStars);
+} else {
+    fetchGitHubStars();
+}
+
 // ===== Typewriter effect for install command =====
 // Disabled - using static code display instead

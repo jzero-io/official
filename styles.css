@@ -371,6 +371,11 @@ body {
     border: none;
     position: relative;
     overflow: hidden;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .btn::before {
@@ -380,6 +385,11 @@ body {
     border-radius: inherit;
     background: inherit;
     z-index: -1;
+}
+
+.btn:active {
+    transform: scale(0.98);
+    border-radius: var(--border-radius-full);
 }
 
 .btn-primary {
@@ -393,10 +403,15 @@ body {
     box-shadow: 0 0 60px rgba(0, 217, 255, 0.25);
 }
 
+.btn-primary:active {
+    box-shadow: 0 0 40px rgba(0, 217, 255, 0.3);
+}
+
 .btn-secondary {
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(129, 140, 248, 0.2) 100%);
     color: var(--color-text);
     border: 2px solid var(--color-accent);
+    box-sizing: border-box;
 }
 
 .btn-secondary:hover {

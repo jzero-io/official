@@ -238,7 +238,7 @@ function setLanguage(lang) {
 function initLanguage() {
     const saved = localStorage.getItem('jzero-lang');
     const browser = navigator.language.startsWith('zh') ? 'zh' : 'en';
-    const lang = saved || browser;
+    const lang = saved || 'en'; // 默认英文
 
     // 先设置链接，避免跳转问题
     const adminLink = document.getElementById('jzero-admin-link');

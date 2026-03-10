@@ -637,10 +637,67 @@ body {
     color: var(--color-text-muted);
 }
 
+/* ===== Trusted By Section ===== */
+.trusted {
+    padding: var(--spacing-4xl) 0;
+    text-align: center;
+}
+
+.trusted .section-header h2 {
+    margin-bottom: var(--spacing-md);
+}
+
+.trusted-label {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-lg);
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.trusted-coming-soon {
+    text-align: center;
+    color: var(--color-primary);
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    margin-top: var(--spacing-2xl);
+}
+
+.trusted-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-3xl);
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.trusted-logo {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    transition: all var(--transition-base);
+    cursor: default;
+    min-width: 140px;
+    text-align: center;
+}
+
+.trusted-logo:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+}
+
 /* ===== Trusted Section ===== */
 .trusted {
     padding: var(--spacing-3xl) 0;
-    border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -727,6 +784,9 @@ body {
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius-lg);
     transition: all var(--transition-base);
+    text-decoration: none;
+    display: block;
+    color: inherit;
 }
 
 .feature-card:hover {
@@ -758,11 +818,18 @@ body {
     font-size: var(--font-size-xl);
     font-weight: 600;
     margin: 0;
+    color: var(--color-text);
+    transition: color var(--transition-fast);
+}
+
+.feature-card:hover h3 {
+    color: var(--color-primary);
 }
 
 .feature-card p {
     color: var(--color-text-secondary);
     line-height: 1.7;
+    margin: 0;
 }
 
 /* ===== Capabilities Section ===== */
@@ -988,53 +1055,9 @@ body {
 
 /* ===== Footer ===== */
 .footer {
-    padding: var(--spacing-xl) 0 var(--spacing-xl);
+    padding: var(--spacing-2xl) 0;
     border-top: 1px solid var(--color-border);
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: var(--spacing-3xl);
-    margin-bottom: var(--spacing-2xl);
-}
-
-.footer-brand .logo {
-    margin-bottom: var(--spacing-md);
-}
-
-.footer-brand p {
-    color: var(--color-text-secondary);
-    font-size: var(--font-size-sm);
-    max-width: 300px;
-}
-
-.footer-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: var(--spacing-xl);
-}
-
-.footer-column h4 {
-    font-size: var(--font-size-sm);
-    font-weight: 600;
-    margin-bottom: var(--spacing-md);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-text);
-}
-
-.footer-column a {
-    display: block;
-    color: var(--color-text-secondary);
-    text-decoration: none;
-    font-size: var(--font-size-sm);
-    margin-bottom: var(--spacing-sm);
-    transition: color var(--transition-fast);
-}
-
-.footer-column a:hover {
-    color: var(--color-primary);
+    text-align: center;
 }
 
 .footer-bottom {
@@ -1050,16 +1073,101 @@ body {
 
 .footer-social {
     display: flex;
-    gap: var(--spacing-md);
+    justify-content: center;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
 }
 
 .footer-social a {
     color: var(--color-text-secondary);
-    transition: color var(--transition-fast);
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
 }
 
 .footer-social a:hover {
     color: var(--color-primary);
+    background: rgba(0, 217, 255, 0.1);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+.footer-social a img,
+.footer-social a svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* WeChat QR Code */
+.wechat-qr {
+    position: relative;
+    color: var(--color-text-secondary);
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+}
+
+.wechat-qr:hover {
+    color: var(--color-primary);
+    background: rgba(0, 217, 255, 0.1);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+.wechat-qr img,
+.wechat-qr svg {
+    width: 24px;
+    height: 24px;
+}
+
+.qr-popup {
+    position: absolute;
+    bottom: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%) scale(0.9);
+    opacity: 0;
+    visibility: hidden;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-xl);
+    transition: all var(--transition-base);
+    z-index: 100;
+    min-width: 180px;
+}
+
+.wechat-qr:hover .qr-popup {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+}
+
+.qr-image {
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-sm);
+    background: white;
+    border-radius: var(--border-radius-md);
+}
+
+.qr-image img {
+    width: 150px;
+    height: 150px;
+    display: block;
 }
 
 /* ===== Responsive Design ===== */
@@ -1184,6 +1292,19 @@ body {
     .ecosystem-grid,
     .quickstart-steps {
         grid-template-columns: 1fr;
+    }
+
+    .trusted .section-header h2 {
+        font-size: var(--font-size-2xl);
+    }
+
+    .trusted-label {
+        font-size: var(--font-size-base);
+    }
+
+    .trusted-coming-soon {
+        font-size: var(--font-size-lg);
+        margin-top: var(--spacing-xl);
     }
 
     .footer-content {

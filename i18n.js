@@ -12,7 +12,7 @@ const translations = {
         // Hero
         'hero.title.line1': 'jzero + AI',
         'hero.title.line2': 'Efficient & Reliable Go Framework',
-        'hero.subtitle': 'Auto-generate server and client code from api/proto/sql definitions. Let AI generate best-practice business logic with jzero-skills, reduce cognitive load, focus on what matters.',
+        'hero.subtitle': 'Auto-generate server and client code from api/proto/sql descriptive files. Built-in jzero-skills enables AI to generate best-practice business logic code.',
         'hero.cta.github': 'View on GitHub',
         'hero.cta.docs': 'Read the Docs',
         'hero.code.desc': 'One-Click Install jzero',
@@ -21,25 +21,23 @@ const translations = {
         'hero.code.comment2': '# ✓ Swagger UI available at /swagger',
 
         // Trusted
-        'trusted.label': 'Trusted by developers building modern microservices',
-        'trusted.logo1': 'Production Ready',
-        'trusted.logo2': 'Enterprise Scale',
-        'trusted.logo3': 'Cloud Native',
-        'trusted.logo4': 'AI Enhanced',
+        'trusted.title': 'Trusted By',
+        'trusted.label': 'Trusted by developers, embracing the AI era',
+        'trusted.coming_soon': 'Coming Soon',
 
         // Features
         'features.title': 'Built for modern development',
         'features.subtitle': 'Everything you need to build scalable microservices in Go, without the complexity.',
-        'features.1.title': 'Framework Code Generation',
-        'features.1.desc': 'Generate production-ready server and client code from API, Proto, and SQL definitions. Solid foundation for your applications.',
+        'features.1.title': 'Framework Code Auto-Generation',
+        'features.1.desc': 'Generate basic framework code from api/proto/sql descriptive files.',
         'features.2.title': 'Business Logic Auto-Generation',
-        'features.2.desc': 'Built-in jzero-skills enables AI to generate best-practice business logic. Lower cognitive load, ship faster, focus on what matters.',
-        'features.3.title': 'Flexible Configuration',
-        'features.3.desc': 'Control jzero with config files, CLI args, or environment variables. Mix and match to fit your workflow. Simple by default, powerful when needed.',
-        'features.4.title': 'Multiple Generation Strategies',
-        'features.4.desc': 'Flexible code generation strategies including full regeneration and git-change based incremental updates. Adapt to your project needs.',
-        'features.5.title': 'Custom Templates',
-        'features.5.desc': 'Built-in templates follow best practices. Create custom templates for your enterprise needs. Consistent code across your team, every time.',
+        'features.2.desc': 'Built-in jzero-skills enables AI to generate best-practice business logic code.',
+        'features.3.title': 'Custom Template Code Generation',
+        'features.3.desc': 'Support custom template code generation, build exclusive enterprise template repositories.',
+        'features.4.title': 'Ecosystem Compatibility',
+        'features.4.desc': 'Based on go-zero development, maintaining ecosystem compatibility while solving existing pain points and extending new features.',
+        'features.5.title': 'Ready to Use',
+        'features.5.desc': 'Generate code with minimal commands, built-in rich component library, support multi-database compatibility with the same codebase, and more.',
         'features.6.title': 'Plugin Architecture',
         'features.6.desc': 'Support multi-module collaborative development, ultimately compiled into monolithic service deployment. Easy plugin installation and removal for flexible architecture.',
 
@@ -57,9 +55,9 @@ const translations = {
         // Ecosystem
         'ecosystem.title': 'Related Ecosystem',
         'ecosystem.subtitle': 'Everything you need to build, deploy, and manage your microservices.',
-        'eco.1.title': 'jzero-admin', 'eco.1.desc': 'Next-generation admin system with jzero backend.', 'eco.1.link': 'Live Demo →',
-        'eco.2.title': 'jzero-intellij', 'eco.2.desc': 'JetBrains/GoLand plugin for seamless IDE integration.', 'eco.2.link': 'View Plugin →',
-        'eco.3.title': 'Examples', 'eco.3.desc': 'Example projects demonstrating jzero best practices.', 'eco.3.link': 'Browse Examples →',
+        'eco.1.title': 'jzero-admin', 'eco.1.desc': 'Admin system developed based on jzero.',
+        'eco.2.title': 'jzero-intellij', 'eco.2.desc': 'JetBrains/GoLand plugin for seamless IDE integration.',
+        'eco.3.title': 'Examples', 'eco.3.desc': 'Example projects demonstrating jzero best practices.',
 
         // Quick Start
         'quickstart.title': 'Get started in minutes',
@@ -105,7 +103,7 @@ const translations = {
         // Hero
         'hero.title.line1': 'jzero + AI',
         'hero.title.line2': '高效可靠的 Go 框架',
-        'hero.subtitle': '基于 api/proto/sql 自动生成服务端与客户端代码，内置 jzero-skills，让 AI 生成符合最佳实践的业务逻辑，降低开发心智负担，专注核心业务。',
+        'hero.subtitle': '基于 api/proto/sql 可描述文件自动生成服务端与客户端代码，内置 jzero-skills，让 AI 生成符合最佳实践的业务逻辑代码。',
         'hero.cta.github': '查看 GitHub',
         'hero.cta.docs': '阅读文档',
         'hero.code.desc': '一键安装 jzero',
@@ -114,25 +112,23 @@ const translations = {
         'hero.code.comment2': '# ✓ Swagger UI 访问 /swagger',
 
         // Trusted
-        'trusted.label': '受开发者信赖，构建现代微服务的首选',
-        'trusted.logo1': '生产就绪',
-        'trusted.logo2': '企业级规模',
-        'trusted.logo3': '云原生',
-        'trusted.logo4': 'AI 增强',
+        'trusted.title': '明星客户',
+        'trusted.label': '受开发者信赖，顺应 AI 时代发展',
+        'trusted.coming_soon': '敬请期待',
 
         // Features
         'features.title': '为现代开发而构建',
         'features.subtitle': '构建可扩展 Go 微服务所需的一切，无需复杂配置。',
-        'features.1.title': '基础框架代码生成',
-        'features.1.desc': '从 API、Proto 和 SQL 定义生成生产级代码。为应用提供坚实框架基础。',
+        'features.1.title': '基础框架代码自动生成',
+        'features.1.desc': '基于 api/proto/sql 可描述文件生成基础框架代码。',
         'features.2.title': '业务逻辑代码自动生成',
-        'features.2.desc': '内置 jzero-skills 让 AI 生成最佳实践业务逻辑。降低负担，快速交付。',
-        'features.3.title': '灵活配置',
-        'features.3.desc': '配置文件、命令行或环境变量自由组合。默认简单，需要时强大。',
-        'features.4.title': '多种代码生成策略',
-        'features.4.desc': '支持全量生成和基于 Git 差异的增量生成等多种策略。灵活适配项目需求。',
-        'features.5.title': '自定义模板',
-        'features.5.desc': '内置最佳实践模板。创建企业定制模板，团队代码始终保持一致。',
+        'features.2.desc': '内置 jzero-skills 让 AI 生成符合最佳实践的业务逻辑代码。',
+        'features.3.title': '自定义模板代码生成',
+        'features.3.desc': '支持自定义模板代码生成，构建专属企业模板仓库。',
+        'features.4.title': '生态兼容',
+        'features.4.desc': '基于 go-zero 开发保持生态兼容，同时解决已有的痛点问题并扩展新的功能。',
+        'features.5.title': '开箱即用',
+        'features.5.desc': '极简指令生成代码，内置丰富组件库，支持同一套代码多数据库兼容等。',
         'features.6.title': '支持插件架构',
         'features.6.desc': '支持多模块协同开发，最终编译成单体服务部署。可方便地进行插件的安装和卸载操作，灵活适配架构需求。',
 
@@ -150,9 +146,9 @@ const translations = {
         // Ecosystem
         'ecosystem.title': '相关生态',
         'ecosystem.subtitle': '构建、部署和管理微服务所需的一切。',
-        'eco.1.title': 'jzero-admin', 'eco.1.desc': '基于 jzero 后端的下一代管理系统。', 'eco.1.link': '在线演示 →',
-        'eco.2.title': 'jzero-intellij', 'eco.2.desc': 'JetBrains/GoLand 插件，IDE 无缝集成。', 'eco.2.link': '查看插件 →',
-        'eco.3.title': '示例项目', 'eco.3.desc': '展示 jzero 最佳实践的示例集合。', 'eco.3.link': '浏览示例 →',
+        'eco.1.title': 'jzero-admin', 'eco.1.desc': '基于 jzero 开发的后台管理系统。',
+        'eco.2.title': 'jzero-intellij', 'eco.2.desc': 'JetBrains/GoLand 插件，IDE 无缝集成。',
+        'eco.3.title': '示例项目', 'eco.3.desc': '展示 jzero 最佳实践的示例集合。',
 
         // Quick Start
         'quickstart.subtitle': '从零到运行微服务，不到 5 分钟。',

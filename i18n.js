@@ -20,11 +20,6 @@ const translations = {
         'hero.code.comment1': '# ✓ API server running on :8001',
         'hero.code.comment2': '# ✓ Swagger UI available at /swagger',
 
-        // Trusted
-        'trusted.title': 'Trusted By',
-        'trusted.label': 'Trusted by developers, embracing the AI era',
-        'trusted.coming_soon': 'Coming Soon',
-
         // Features
         'features.title': 'Built for modern development',
         'features.subtitle': 'Everything you need to build scalable microservices in Go, without the complexity.',
@@ -57,7 +52,8 @@ const translations = {
         'ecosystem.subtitle': 'Everything you need to build, deploy, and manage your microservices.',
         'eco.1.title': 'jzero-admin', 'eco.1.desc': 'Admin system developed based on jzero.',
         'eco.2.title': 'jzero-intellij', 'eco.2.desc': 'JetBrains/GoLand plugin for seamless IDE integration.',
-        'eco.3.title': 'Examples', 'eco.3.desc': 'Example projects demonstrating jzero best practices.',
+        'eco.3.title': 'Templates', 'eco.3.desc': 'Curated template marketplace for quick project scaffolding.',
+        'eco.4.title': 'Examples', 'eco.4.desc': 'Example projects demonstrating jzero best practices.',
 
         // Quick Start
         'quickstart.title': 'Get started in minutes',
@@ -111,11 +107,6 @@ const translations = {
         'hero.code.comment1': '# ✓ API 服务运行在 :8001',
         'hero.code.comment2': '# ✓ Swagger UI 访问 /swagger',
 
-        // Trusted
-        'trusted.title': '明星客户',
-        'trusted.label': '受开发者信赖，顺应 AI 时代发展',
-        'trusted.coming_soon': '敬请期待',
-
         // Features
         'features.title': '为现代开发而构建',
         'features.subtitle': '构建可扩展 Go 微服务所需的一切，无需复杂配置。',
@@ -148,7 +139,8 @@ const translations = {
         'ecosystem.subtitle': '构建、部署和管理微服务所需的一切。',
         'eco.1.title': 'jzero-admin', 'eco.1.desc': '基于 jzero 开发的后台管理系统。',
         'eco.2.title': 'jzero-intellij', 'eco.2.desc': 'JetBrains/GoLand 插件，IDE 无缝集成。',
-        'eco.3.title': '示例项目', 'eco.3.desc': '展示 jzero 最佳实践的示例集合。',
+        'eco.3.title': '模板市场', 'eco.3.desc': '精选模板市场，快速搭建项目脚手架。',
+        'eco.4.title': '示例项目', 'eco.4.desc': '展示 jzero 最佳实践的示例集合。',
 
         // Quick Start
         'quickstart.subtitle': '从零到运行微服务，不到 5 分钟。',

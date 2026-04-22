@@ -52,8 +52,10 @@ const translations = {
         'ecosystem.subtitle': 'Everything you need to build, deploy, and manage your microservices.',
         'eco.1.title': 'jzero-admin', 'eco.1.desc': 'Admin system developed based on jzero.',
         'eco.2.title': 'jzero-intellij', 'eco.2.desc': 'JetBrains/GoLand plugin for seamless IDE integration.',
-        'eco.3.title': 'Templates', 'eco.3.desc': 'Curated template marketplace for quick project scaffolding.',
-        'eco.4.title': 'Examples', 'eco.4.desc': 'Example projects demonstrating jzero best practices.',
+        'eco.3.title': 'Plugins', 'eco.3.desc': 'Community plugins extending jzero functionality.',
+        'eco.4.title': 'Templates', 'eco.4.desc': 'Curated template marketplace for quick project scaffolding.',
+        'eco.5.title': 'GitHub Actions', 'eco.5.desc': 'GitHub workflows for automated CI/CD with jzero.',
+        'eco.6.title': 'Examples', 'eco.6.desc': 'Example projects demonstrating jzero best practices.',
 
         // Quick Start
         'quickstart.title': 'Get started in minutes',
@@ -139,8 +141,10 @@ const translations = {
         'ecosystem.subtitle': '构建、部署和管理微服务所需的一切。',
         'eco.1.title': 'jzero-admin', 'eco.1.desc': '基于 jzero 开发的后台管理系统。',
         'eco.2.title': 'jzero-intellij', 'eco.2.desc': 'JetBrains/GoLand 插件，IDE 无缝集成。',
-        'eco.3.title': '模板市场', 'eco.3.desc': '精选模板市场，快速搭建项目脚手架。',
-        'eco.4.title': '示例项目', 'eco.4.desc': '展示 jzero 最佳实践的示例集合。',
+        'eco.3.title': '插件市场', 'eco.3.desc': '社区插件扩展 jzero 功能。',
+        'eco.4.title': '模板市场', 'eco.4.desc': '精选模板市场，快速搭建项目脚手架。',
+        'eco.5.title': 'GitHub 工作流', 'eco.5.desc': 'jzero 自动化 CI/CD 的 GitHub 工作流。',
+        'eco.6.title': '示例项目', 'eco.6.desc': '展示 jzero 最佳实践的示例集合。',
 
         // Quick Start
         'quickstart.subtitle': '从零到运行微服务，不到 5 分钟。',
